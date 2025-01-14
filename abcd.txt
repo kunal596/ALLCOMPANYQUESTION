@@ -1,0 +1,98 @@
+Write a code to find Fibonacci Series using Recursion
+Write a Program to find out the Spiral Traversal of a Matrix.
+Write code to check if two strings match where one string contains wildcard characters
+Write a Program to Reverse an Array
+Write a Program to Find the Factorial of a Number using Recursion.
+Write a Program to Convert Digits to Words.
+Write a Program to Find the Prime Factors of a Number.
+Write a Program to Find the Roots of a Quadratic Equation
+Write a Program to Find the Largest Element in an Array
+Write a Program to Add two Fractions
+Write a Program to Find out the Sum of Digits of a Number.
+Write a Program to Find out the Power of a Number
+Write a Program to Find out the Sum of Digits of a Number.
+Write a code to find consecutive largest subsequence
+Write a code to Count Inversion
+Write a code to Remove space from a string
+Write a code to Replace a Substring in a string
+ Write a code to Sort the element of the array without sort method
+ Write a code to Sort the element of the array
+ Write a code to Reverse the element of the array
+ Write a code to Print the smallest element of the array
+ Write a code to Remove all characters from string except alphabets
+ Write a code to find Find the ASCII value of a character
+ Write a code to find an Automorphic number
+ Write a program to check whether a character is a vowel or consonant
+ Write a program for Binary to Decimal to conversion
+Write code to check a String is palindrome or not?
+Write a Program to Find the Sum of Natural Numbers using Recursion.
+Write a program to add Two Matrices using Multi-dimensional Array.
+Write a program to find the sum of Natural Numbers using Recursion.
+Write the code to for Armstrong number
+Write a code to find the factorial of a number.
+ Write a code to check for the longest palindrome in an array.
+  Write a code to find non-repeating elements in an array.
+  Write a code to find circular rotation of an array by K positions.
+  Write a code to replace each element in an array by its rank in the array
+  Write a code for Heap sort.
+   Write a code to replace a substring in a string.
+    Find non-repeating characters in a string
+    Write to code to check whether a given year is leap year or not.
+     How is the merge sort algorithm implemented?
+     Write a code for bubble sort
+     Write code to check if two strings match where one string contains wildcard characters
+     Write code to Calculate frequency of characters in a string
+      Write code Check if the given string is Palindrome or not
+       Write code to Check if two strings are Anagram or not
+       Write code of  Perfect number
+       Write code of Greatest Common Divisor 
+       Write the code to find the Fibonacci series upto the nth term.
+       Write a code to reverse a number
+
+
+
+
+1. Fibonacci Series using Recursion
+2. Spiral Traversal of a Matrix
+3. Check if two strings match with wildcard characters
+4. Reverse an Array
+5. Factorial using Recursion
+6. Convert Digits to Words
+7. Prime Factors of a Number
+8. Find the Roots of a Quadratic Equation
+9. Find the Largest Element in an Array
+10. Add Two Fractions
+11. Sum of Digits of a Number
+12. Find the Power of a Number
+13. Consecutive Largest Subsequence
+14. Count Inversions in an Array
+15. Remove Spaces from a String
+16. Replace a Substring in a String
+17. Sort Elements of an Array (without using sort method)
+18. Sort Elements of an Array
+19. Reverse the Elements of an Array
+20. Print the Smallest Element of an Array
+21. Remove all characters from a string except alphabets
+22. Find the ASCII Value of a Character
+23. Check if a Number is Automorphic
+24. Check if a Character is a Vowel or Consonant
+25. Binary to Decimal Conversion
+26. Check if a String is a Palindrome
+27. Sum of Natural Numbers using Recursion
+28. Add Two Matrices using Multi-dimensional Array
+29. Armstrong Number
+30. Longest Palindrome in an Array
+31. Find Non-Repeating Elements in an Array
+32. Circular Rotation of an Array by K Positions
+33. Replace Each Element in an Array by Its Rank
+34. Heap Sort
+35. Calculate Frequency of Characters in a String
+36. Check if Two Strings are Anagrams
+37. Check if a Number is a Perfect Number
+38. Find the Greatest Common Divisor (GCD)
+39. Fibonacci Series up to the nth Term
+40. Reverse a Number
+41. Leap Year Check
+42. Merge Sort Algorithm
+43. Bubble Sort
+44. Check if a String Contains Non-Repeating Characters
