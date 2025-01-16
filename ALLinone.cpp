@@ -150,6 +150,21 @@ class leap{
     }
 };
 
+
+class sumofnat{
+    public:
+        int sum(int n){
+            if(n==0)
+                return n;
+            return n+sum(n-1);
+        }
+        void sumout(int n){
+            cout<<"enter a number: ";
+            cin>>n;
+            cout<<sum(n)<<endl;;
+        }
+};
+
 int main()
 {
     // driver code for multiple test cases
@@ -159,6 +174,7 @@ int main()
     fib o3;
     gd o4;
     leap o5;
+    sumofnat o6;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
@@ -171,7 +187,8 @@ int main()
         // o2.factoutput(n);
         // o3.fibbooutput(n);
         // o4.output();
-         o5.lep(n);
+        //  o5.lep(n);
+        o6.sumout(n);
     }
     return 0;
 }
