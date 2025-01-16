@@ -90,9 +90,9 @@ Write a code to find the factorial of a number.
 36. Check if Two Strings are Anagrams
 37. Check if a Number is a Perfect Number
 38. Find the Greatest Common Divisor (GCD)
-39. Fibonacci Series up to the nth Term
-40. Reverse a Number
-41. Leap Year Check
+#39. Fibonacci Series up to the nth Term
+#40. Reverse a Number
+#41. Leap Year Check
 42. Merge Sort Algorithm
 43. Bubble Sort
 44. Check if a String Contains Non-Repeating Characters
