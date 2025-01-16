@@ -133,6 +133,23 @@ public:
     }
 };
 
+class leap{
+    public:
+    int lep(int n){
+        bool leap = true; 
+        cout<<"enter a number: "<<endl;
+        cin>>n;
+        if(n<1000||n>10000)
+            return 0;
+        if(n%4==0 ||n%400==0 && n%100!=0){
+           cout<<"its leap"<<endl;
+        }
+        else
+           return !leap;
+        return 0; 
+    }
+};
+
 int main()
 {
     // driver code for multiple test cases
@@ -141,6 +158,7 @@ int main()
     fac o2;
     fib o3;
     gd o4;
+    leap o5;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
@@ -152,7 +170,8 @@ int main()
         // o1.primeoutput(n);
         // o2.factoutput(n);
         // o3.fibbooutput(n);
-        o4.output();
+        // o4.output();
+         o5.lep(n);
     }
     return 0;
 }
