@@ -133,37 +133,102 @@ public:
     }
 };
 
-class leap{
-    public:
-    int lep(int n){
-        bool leap = true; 
-        cout<<"enter a number: "<<endl;
-        cin>>n;
-        if(n<1000||n>10000)
+class leap
+{
+public:
+    int lep(int n)
+    {
+        bool leap = true;
+        cout << "enter a number: " << endl;
+        cin >> n;
+        if (n < 1000 || n > 10000)
             return 0;
-        if(n%4==0 ||n%400==0 && n%100!=0){
-           cout<<"its leap"<<endl;
+        if (n % 4 == 0 || n % 400 == 0 && n % 100 != 0)
+        {
+            cout << "its leap" << endl;
         }
         else
-           return !leap;
-        return 0; 
+            cout << "not leap year: " << endl;
+        return 0;
+    }
+};
+
+class sumofnat
+{
+public:
+    int sum(int n)
+    {
+        if (n == 0)
+            return n;
+        return n + sum(n - 1);
+    }
+    void sumout(int n)
+    {
+        cout << "enter a number: ";
+        cin >> n;
+        cout << sum(n) << endl;
+        ;
+    }
+};
+
+class revArr
+{
+public:
+    int a = 0, b = 0, k,m=0,l=0;
+    vector<int> p;
+    int n;
+    int arr(int n)
+    {
+        if (n < 1)
+            return n;
+        if (n > 0)
+        {
+            cin >> b;
+            p.push_back(b);
+        }
+        return arr(n - 1);
+    }
+    void arrinput(int n)
+    {
+        if (n < 1)
+            return;
+        cout << p[a] << " ";
+        a++;
+        arrinput(n - 1);
+    }
+    void reverse(int k)
+    {
+        if(k == 0)
+            return;
+        swap(p[l], p[a-1]);
+        l++;
+        a--;
+        reverse(k-1);
+    }
+    void output(int m){
+        if (m==n)
+            return ;
+        cout<<p[m]<<" ";
+        output(m+1);
+    }
+    int arroutput()
+    {
+        cout << "enter the size of array: " << endl;
+        cin >> n;
+        cout << "enter elements of array: " << endl;
+        arr(n);
+        arrinput(n);
+        cout << endl;
+        k = (n/2);
+        reverse(k);
+        output(m);
+        cout << endl;
+        p.clear();
+        return a = 0, b = 0, n = 0,k = 0,m=0,l=0;
     }
 };
 
 
-class sumofnat{
-    public:
-        int sum(int n){
-            if(n==0)
-                return n;
-            return n+sum(n-1);
-        }
-        void sumout(int n){
-            cout<<"enter a number: ";
-            cin>>n;
-            cout<<sum(n)<<endl;;
-        }
-};
 
 int main()
 {
@@ -175,6 +240,7 @@ int main()
     gd o4;
     leap o5;
     sumofnat o6;
+    revArr o7;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
@@ -188,7 +254,8 @@ int main()
         // o3.fibbooutput(n);
         // o4.output();
         //  o5.lep(n);
-        o6.sumout(n);
+        // o6.sumout(n);
+        o7.arroutput();
     }
     return 0;
 }

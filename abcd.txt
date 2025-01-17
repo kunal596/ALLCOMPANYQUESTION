@@ -52,11 +52,11 @@ Write a code to find the factorial of a number.
 
 
 
-1. Fibonacci Series using Recursion
+#1. Fibonacci Series using Recursion
 2. Spiral Traversal of a Matrix
 3. Check if two strings match with wildcard characters
 4. Reverse an Array
-5. Factorial using Recursion
+#5. Factorial using Recursion
 6. Convert Digits to Words
 7. Prime Factors of a Number
 8. Find the Roots of a Quadratic Equation
