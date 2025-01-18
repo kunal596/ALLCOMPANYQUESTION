@@ -292,29 +292,136 @@ public:
     }
 };
 
-
-class binary_todecimal{
-    public:
-    int a=0,b=0,count=0,c=0;
-    int binary(int n){
-        if(n==0)
+class binary_todecimal
+{
+public:
+    int a = 0, b = 0, count = 0, c = 0;
+    int binary(int n)
+    {
+        if (n == 0)
             return 0;
-        b = n%10;
-        count= b*pow(2,a);
+        b = n % 10;
+        count = b * pow(2, a);
         c = c + count;
         a++;
-        return binary(n/10);
+        return binary(n / 10);
     }
-    int output(){
+    int output()
+    {
         int n;
-        cout<<"enter the number in the form of binary: "<<endl;
-        cin>>n;
+        cout << "enter the number in the form of binary: " << endl;
+        cin >> n;
         binary(n);
-        cout<<c<<endl;
-        return a=0,b=0,count=0,c=0;
+        cout << c << endl;
+        return a = 0, b = 0, count = 0, c = 0;
     }
-
 };
+
+class ascii
+{
+public:
+    int asci(char n)
+    {
+        return int(n);
+    }
+    void output()
+    {
+        char n;
+        cout << "enter the charachter: " << endl;
+        cin >> n;
+        cout << asci(n) << endl;
+    }
+};
+
+class clasify_to_conso_and_vowels
+{
+public:
+    int vowels(char n)
+    {
+        if (n == 'a' || n == 'A' || n == 'E' || n == 'e' || n == 'i' || n == 'I' || n == 'o' || n == 'O' || n == 'U' || n == 'u')
+        {
+            cout << "vowels" << endl;
+            return n;
+        }
+        else
+        {
+            cout << "consonants" << endl;
+            return n;
+        }
+        return 0;
+    }
+    void output()
+    {
+        char n;
+        cout << "enter the charachter: " << endl;
+        cin >> n;
+        vowels(n);
+    }
+};
+
+class perfect_number
+{
+public:
+    int a = 0, b = 0, c = 0;
+    int perfect(int n)
+    {
+        if (n == 0)
+        {
+            return n;
+        }
+        b = b + n % 10;
+        a++;
+        return perfect(n / 10);
+    }
+    int perfect2(int n)
+    {
+        if (n == 0)
+        {
+            return n;
+        }
+        if (n % 10 == 0)
+        {
+            return n%10;
+        }
+        else if (b % (n % 10) == 0)
+        {
+            c++;
+        }
+        return perfect2(n / 10);
+    }
+    int output()
+    {
+        int n;
+        cout << "enter the number: " << endl;
+        cin >> n;
+        if (n < 10)
+        {
+            return 0;
+        }
+        perfect(n);
+        perfect2(n);
+        if (a == c)
+        {
+            cout << "its perfect number " << endl;
+        }
+        else
+        {
+            cout << "its not a perfect number " << endl;
+        }
+        return a = 0, b = 0, c = 0;
+    }
+};
+
+// class perfect_number{
+//     public :
+//         int perfect(){
+
+//         }
+//         void output(){
+
+//         }
+// };
+
 int main()
 {
     // driver code for multiple test cases
@@ -328,6 +435,9 @@ int main()
     revArr o7;
     primefactornumber o8;
     binary_todecimal o9;
+    ascii o10;
+    clasify_to_conso_and_vowels o11;
+    perfect_number o12;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
@@ -340,11 +450,15 @@ int main()
         // o2.factoutput(n);
         // o3.fibbooutput(n);
         // o4.output();
-        //  o5.lep(n);
+        // o5.lep(n);
         // o6.sumout(n);
         // o7.arroutput();
         // o8.primeout(n);
-        o9.output();
+        // o9.output();
+        // o10.output();
+        // o11.output();
+        // o12.output();
+        
     }
     return 0;
 }
