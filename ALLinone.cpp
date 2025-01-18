@@ -234,10 +234,21 @@ class primefactornumber
 {
 public:
     int k = 0;
-    int a = 2, b = 2, l;
-
-
-
+    int a = 2;
+    void primefactor(int n)
+    {
+        if (a == n)
+            return;
+        if (n % a == 0)
+        {
+            if (a == 2 || a == 3)
+                cout << a << endl;
+            if (a % 2 != 0 && a % 3 != 0)
+                cout << a << endl;
+        }
+        a++;
+        primefactor(n);
+    }
 
     int withoutfunct(int n)
     {
@@ -273,11 +284,12 @@ public:
         return 0;
     }
 
-int primeout(int n){
-    withoutfunct(n);
-    return a=2,b=2,k=0;
-}
-
+    int primeout(int n)
+    {
+        // withoutfunct(n);
+        primefactor(n);
+        return a = 2;
+    }
 };
 
 int main()
