@@ -292,6 +292,29 @@ public:
     }
 };
 
+
+class binary_todecimal{
+    public:
+    int a=0,b=0,count=0,c=0;
+    int binary(int n){
+        if(n==0)
+            return 0;
+        b = n%10;
+        count= b*pow(2,a);
+        c = c + count;
+        a++;
+        return binary(n/10);
+    }
+    int output(){
+        int n;
+        cout<<"enter the number in the form of binary: "<<endl;
+        cin>>n;
+        binary(n);
+        cout<<c<<endl;
+        return a=0,b=0,count=0,c=0;
+    }
+
+};
 int main()
 {
     // driver code for multiple test cases
@@ -304,13 +327,14 @@ int main()
     sumofnat o6;
     revArr o7;
     primefactornumber o8;
+    binary_todecimal o9;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
     while (a--)
     {
-        cout << "enter a number: " << endl;
-        cin >> n;
+        // cout << "enter a number: " << endl;
+        // cin >> n;
         // o.revoutput(n);
         // o1.primeoutput(n);
         // o2.factoutput(n);
@@ -319,7 +343,8 @@ int main()
         //  o5.lep(n);
         // o6.sumout(n);
         // o7.arroutput();
-        o8.primeout(n);
+        // o8.primeout(n);
+        o9.output();
     }
     return 0;
 }
