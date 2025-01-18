@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class rew
 {
 public:
@@ -174,7 +175,7 @@ public:
 class revArr
 {
 public:
-    int a = 0, b = 0, k,m=0,l=0;
+    int a = 0, b = 0, k, m = 0, l = 0;
     vector<int> p;
     int n;
     int arr(int n)
@@ -198,18 +199,19 @@ public:
     }
     void reverse(int k)
     {
-        if(k == 0)
+        if (k == 0)
             return;
-        swap(p[l], p[a-1]);
+        swap(p[l], p[a - 1]);
         l++;
         a--;
-        reverse(k-1);
+        reverse(k - 1);
     }
-    void output(int m){
-        if (m==n)
-            return ;
-        cout<<p[m]<<" ";
-        output(m+1);
+    void output(int m)
+    {
+        if (m == n)
+            return;
+        cout << p[m] << " ";
+        output(m + 1);
     }
     int arroutput()
     {
@@ -219,16 +221,64 @@ public:
         arr(n);
         arrinput(n);
         cout << endl;
-        k = (n/2);
+        k = (n / 2);
         reverse(k);
         output(m);
         cout << endl;
         p.clear();
-        return a = 0, b = 0, n = 0,k = 0,m=0,l=0;
+        return a = 0, b = 0, n = 0, k = 0, m = 0, l = 0;
     }
 };
 
+class primefactornumber
+{
+public:
+    int k = 0;
+    int a = 2, b = 2, l;
 
+
+
+
+    int withoutfunct(int n)
+    {
+        int k;
+        for (int i = 2; i < n; i++)
+        {
+            if (n % i == 0)
+            {
+                // cout<<i<<endl;
+                if (i == 2)
+                {
+                    cout << i << endl;
+                }
+                else
+                {
+                    int k = 0;
+                    int j = 2;
+                    while (i > j)
+                    {
+                        if (i % j == 0)
+                        {
+                            k++;
+                        }
+                        j++;
+                    }
+                    if (k == 0)
+                    {
+                        cout << i << endl;
+                    }
+                }
+            }
+        }
+        return 0;
+    }
+
+int primeout(int n){
+    withoutfunct(n);
+    return a=2,b=2,k=0;
+}
+
+};
 
 int main()
 {
@@ -241,13 +291,14 @@ int main()
     leap o5;
     sumofnat o6;
     revArr o7;
+    primefactornumber o8;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
     while (a--)
     {
-        // cout << "enter a number: " << endl;
-        // cin >> n;
+        cout << "enter a number: " << endl;
+        cin >> n;
         // o.revoutput(n);
         // o1.primeoutput(n);
         // o2.factoutput(n);
@@ -255,7 +306,8 @@ int main()
         // o4.output();
         //  o5.lep(n);
         // o6.sumout(n);
-        o7.arroutput();
+        // o7.arroutput();
+        o8.primeout(n);
     }
     return 0;
 }
