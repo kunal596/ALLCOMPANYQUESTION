@@ -359,13 +359,13 @@ public:
     }
 };
 
-class perfect_number
+class sum_of_digit_divisible_by_each_digit
 {
 public:
     int a = 0, b = 0, c = 0;
     int perfect(int n)
     {
-        if (n == 0)
+        if(n == 0)
         {
             return n;
         }
@@ -402,25 +402,42 @@ public:
         perfect2(n);
         if (a == c)
         {
-            cout << "its perfect number " << endl;
+            cout << "its divisible by each number " << endl;
         }
         else
         {
-            cout << "its not a perfect number " << endl;
+            cout << "its not a divisible by each number " << endl;
         }
         return a = 0, b = 0, c = 0;
     }
 };
 
-// class perfect_number{
-//     public :
-//         int perfect(){
 
-//         }
-//         void output(){
-
-//         }
-// };
+class perfect_number{
+    public :
+        int a =1,b=0,n;
+        int perfect(int n){
+            if(a==n)
+                return n;
+            if(n%a==0){
+                b=b+a;
+                cout<<a<<endl;
+            }
+        a++;
+        return perfect(n);
+        }
+        int output(){
+            cout<<"enter a number: "<<endl;
+            cin>>n;
+            perfect(n);
+            if(b==a){
+                cout<<"its perfect number: "<<endl;
+            }else{
+                cout<<"its not a perfect number: "<<endl;
+            }
+            return a=1,b=0;
+        }
+};
 
 int main()
 {
@@ -437,7 +454,8 @@ int main()
     binary_todecimal o9;
     ascii o10;
     clasify_to_conso_and_vowels o11;
-    perfect_number o12;
+    sum_of_digit_divisible_by_each_digit o12;
+    perfect_number o13;
     int a, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
@@ -458,7 +476,7 @@ int main()
         // o10.output();
         // o11.output();
         // o12.output();
-        
+        o13.output();
     }
     return 0;
 }
