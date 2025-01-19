@@ -63,11 +63,11 @@ Write a code to find the factorial of a number.
 9. Find the Largest Element in an Array
 10. Add Two Fractions
 11. Sum of Digits of a Number
-12. Find the Power of a Number
+#12. Find the Power of a Number
 13. Consecutive Largest Subsequence
 14. Count Inversions in an Array
-15. Remove Spaces from a String
-16. Replace a Substring in a String
+#15. Remove Spaces from a String
+16. Replace a Substring in a String  
 17. Sort Elements of an Array (without using sort method)
 18. Sort Elements of an Array
 19. Reverse the Elements of an Array
@@ -87,7 +87,7 @@ Write a code to find the factorial of a number.
 33. Replace Each Element in an Array by Its Rank
 34. Heap Sort
 35. Calculate Frequency of Characters in a String
-36. Check if Two Strings are Anagrams
+#36. Check if Two Strings are Anagrams
 #37. Check if a Number is a Perfect Number
 #38. Find the Greatest Common Divisor (GCD)
 #39. Fibonacci Series up to the nth Term

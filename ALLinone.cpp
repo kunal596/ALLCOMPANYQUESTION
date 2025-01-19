@@ -365,7 +365,7 @@ public:
     int a = 0, b = 0, c = 0;
     int perfect(int n)
     {
-        if(n == 0)
+        if (n == 0)
         {
             return n;
         }
@@ -381,7 +381,7 @@ public:
         }
         if (n % 10 == 0)
         {
-            return n%10;
+            return n % 10;
         }
         else if (b % (n % 10) == 0)
         {
@@ -412,31 +412,242 @@ public:
     }
 };
 
-
-class perfect_number{
-    public :
-        int a =1,b=0,n;
-        int perfect(int n){
-            if(a==n)
-                return n;
-            if(n%a==0){
-                b=b+a;
-                cout<<a<<endl;
-            }
+class perfect_number
+{
+public:
+    int a = 1, b = 0, n;
+    int perfect(int n)
+    {
+        if (a == n)
+            return n;
+        if (n % a == 0)
+        {
+            b = b + a;
+            cout << a << endl;
+        }
         a++;
         return perfect(n);
+    }
+    int output()
+    {
+        cout << "enter a number: " << endl;
+        cin >> n;
+        perfect(n);
+        if (b == a)
+        {
+            cout << "its perfect number: " << endl;
         }
-        int output(){
-            cout<<"enter a number: "<<endl;
-            cin>>n;
-            perfect(n);
-            if(b==a){
-                cout<<"its perfect number: "<<endl;
-            }else{
-                cout<<"its not a perfect number: "<<endl;
+        else
+        {
+            cout << "its not a perfect number: " << endl;
+        }
+        return a = 1, b = 0;
+    }
+};
+
+class remove_wide_space
+{
+public:
+    int b = 0;
+    string k;
+    int remove(int a)
+    {
+        if (b == a)
+            return b;
+        if (k[b] != ' ')
+            cout << k[b];
+        b++;
+        return remove(a);
+    }
+
+    int output()
+    {
+        cout << "enter the string: " << endl;
+        getline(cin, k);
+        remove(k.length());
+        cout << endl;
+        return b = 0;
+    }
+
+    void without_function_output()
+    {
+        string l;
+        cout << "enter the string: " << endl;
+        cin >> l;
+        getline(cin, l);
+        for (int i = 0; i < l.size(); i++)
+        {
+            if (l[i] != ' ')
+            {
+                cout << l[i];
             }
-            return a=1,b=0;
         }
+        cout << endl;
+    }
+};
+
+class power_of_a_number
+{
+public:
+    int a, b;
+    int c = 1;
+    int power(int b)
+    {
+        if (b == 0)
+        {
+            return b;
+        }
+        c = c * a;
+        return power(b - 1);
+    }
+    int output()
+    {
+        cout << "enter the number: " << endl;
+        cin >> a;
+        cout << "enter the power of a number: " << endl;
+        cin >> b;
+        // cout<<pow(a,b);
+        power(b);
+        cout << c << endl;
+        ;
+        return c = 1;
+    }
+};
+
+class Anagram
+{
+public:
+    int k = 0;
+    int l, m = 0, n = 0;
+    string a, b, c;
+    int looping(int n)
+    {
+        if (n == a.size())
+        {
+            return n;
+        }
+        n++;
+        return looping(n);
+    }
+
+    int ana(int m)
+    {
+        if (m == a.length())
+        {
+            return m;
+        }
+        if (int(a[m]) > int(a[looping(0)]))
+        {
+            swap(a[m], a[looping(n)]);
+        }
+        cout << a[m];
+        m++;
+        return ana(m);
+    }
+
+    // void output()
+    // {
+    //     cout << "enter the string 1: " << endl;
+    //     getline(cin, a);
+    //     cout << "enter the string 2: " << endl;
+    //     getline(cin, b);
+    //     looping(n);
+    //     ana(n);
+    // if (a.length() == b.length())
+    // {
+
+    // }
+    //     str1(a.length());
+    //     if (k == a.length())
+    //     {
+    //         cout << "The string is anagram "<< endl;
+    //     }
+    //     else
+    //     {
+    //         cout << "it is not an Anagram "<< endl;
+    //     }
+    // }
+    // else
+    // {
+    //     cout << "it is not an anagram " << endl;
+    // }
+    // }
+
+    // 1 . approch
+    void approch()
+    {
+        cout << "enter the string " << endl;
+        getline(cin, a);
+        cout << "enter the string " << endl;
+        getline(cin, b);
+        for (int i = 0; i < a.length(); i++)
+        {
+            for (int j = 1; j < a.length(); j++)
+            {
+                if (int(a[i]) > a[j])
+                {
+                    swap(a[i], a[j]);
+                }
+            }
+        }
+        for (int i = 0; i < b.length(); i++)
+        {
+            for (int j = 1; j < b.length(); j++)
+            {
+                if (int(b[i]) > b[j])
+                {
+                    swap(b[i], b[j]);
+                }
+            }
+        }
+        if (a == b)
+        {
+            cout << "its anagram " << endl;
+        }
+        else
+        {
+            cout << "its not angaram" << endl;
+        }
+    }
+
+    void output()
+    {
+        cout << "enter the string " << endl;
+        getline(cin, a);
+        cout << "enter the string " << endl;
+        getline(cin, b);
+        int g = 0;
+        if (a.length() == b.length())
+        {
+            for (int i = 0; i < a.length(); i++)
+            {
+                for (int j = 0; j < a.length(); j++)
+                {
+                    if (a[i] == b[j])
+                    {
+                        g++;
+                        break;
+                    }
+                }
+            }
+            if (g == a.length())
+            {
+                cout<<g<<endl;
+                cout<<a.length()<<endl;
+                cout << "its anagram " << endl;
+            }
+            else
+            {
+                cout<<a<<endl;
+                cout<<b<<endl;
+                cout << "its not anagram " << endl;
+            }
+        }
+        else
+        {
+            cout << "its not anagram " << endl;
+        }
+    }
 };
 
 int main()
@@ -456,9 +667,13 @@ int main()
     clasify_to_conso_and_vowels o11;
     sum_of_digit_divisible_by_each_digit o12;
     perfect_number o13;
-    int a, n;
+    remove_wide_space o14;
+    power_of_a_number o15;
+    Anagram o16;
+    int a = 1, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
+    cin.ignore();
     while (a--)
     {
         // cout << "enter a number: " << endl;
@@ -476,7 +691,10 @@ int main()
         // o10.output();
         // o11.output();
         // o12.output();
-        o13.output();
+        // o13.output();
+        // o14.output();
+        // o15.output();
+        o16.output();
     }
     return 0;
 }
