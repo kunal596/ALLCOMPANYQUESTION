@@ -520,58 +520,31 @@ public:
     int k = 0;
     int l, m = 0, n = 0;
     string a, b, c;
-    int looping(int n)
+
+    void output()
     {
-        if (n == a.size())
+        cout << "enter the string 1: " << endl;
+        getline(cin, a);
+        cout << "enter the string 2: " << endl;
+        getline(cin, b);
+        if (a.size() == b.size())
         {
-            return n;
+            sort(a.begin(), a.end());
+            sort(b.begin(), b.end());
+            if (a == b)
+            {
+                cout << "its an anagram " << endl;
+            }
+            else
+            {
+                cout << "its not an anagram " << endl;
+            }
         }
-        n++;
-        return looping(n);
+        else
+        {
+            cout << "its not an anagram " << endl;
+        }
     }
-
-    int ana(int m)
-    {
-        if (m == a.length())
-        {
-            return m;
-        }
-        if (int(a[m]) > int(a[looping(0)]))
-        {
-            swap(a[m], a[looping(n)]);
-        }
-        cout << a[m];
-        m++;
-        return ana(m);
-    }
-
-    // void output()
-    // {
-    //     cout << "enter the string 1: " << endl;
-    //     getline(cin, a);
-    //     cout << "enter the string 2: " << endl;
-    //     getline(cin, b);
-    //     looping(n);
-    //     ana(n);
-    // if (a.length() == b.length())
-    // {
-
-    // }
-    //     str1(a.length());
-    //     if (k == a.length())
-    //     {
-    //         cout << "The string is anagram "<< endl;
-    //     }
-    //     else
-    //     {
-    //         cout << "it is not an Anagram "<< endl;
-    //     }
-    // }
-    // else
-    // {
-    //     cout << "it is not an anagram " << endl;
-    // }
-    // }
 
     // 1 . approch
     void approch()
@@ -610,7 +583,7 @@ public:
         }
     }
 
-    void output()
+    void approch2()
     {
         cout << "enter the string " << endl;
         getline(cin, a);
@@ -632,14 +605,14 @@ public:
             }
             if (g == a.length())
             {
-                cout<<g<<endl;
-                cout<<a.length()<<endl;
+                cout << g << endl;
+                cout << a.length() << endl;
                 cout << "its anagram " << endl;
             }
             else
             {
-                cout<<a<<endl;
-                cout<<b<<endl;
+                cout << a << endl;
+                cout << b << endl;
                 cout << "its not anagram " << endl;
             }
         }
