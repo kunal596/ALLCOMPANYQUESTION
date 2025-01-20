@@ -623,6 +623,241 @@ public:
     }
 };
 
+class palindome_string
+{
+public:
+    string a, k = "";
+    int l = 0;
+    int rev(int b)
+    {
+        if (b < 0)
+            return 0;
+        k.push_back(a[b]);
+        b--;
+        return rev(b);
+    }
+    // this  done with function recursion
+    int output()
+    {
+        cout << "enter the string: " << endl;
+        cin >> a;
+        l = a.size() - 1;
+        rev(l);
+        if (a == k)
+        {
+            cout << k << endl;
+            cout << "its palindrome" << endl;
+        }
+        else
+        {
+            cout << "its not palindrome: " << endl;
+        }
+        k.clear();
+        return 0;
+    }
+    // without using function recursion
+    void approach()
+    {
+        string a, b = "";
+        cout << "enter the string: " << endl;
+        cin >> a;
+        for (int i = a.length() - 1; i >= 0; i--)
+        {
+            b.push_back(a[i]);
+            // b=b+a[i];
+        }
+        if (a == b)
+        {
+            cout << "its palindrome" << endl;
+        }
+        else
+        {
+            cout << "its not a palindrome" << endl;
+        }
+    }
+};
+
+class remove_special_char
+{
+public:
+    string a;
+    string k = "";
+    int b;
+    int iter(int b)
+    {
+        if (b == a.length())
+            return b;
+        if (int(a[b]) >= 65 && int(a[b]) <= 90 || int(a[b]) >= 97 && int(a[b]) <= 122)
+        {
+            // cout<<a[b];
+            k = k + a[b];
+        }
+        b++;
+        return iter(b);
+    }
+    void output()
+    {
+        cout << "enter the string : " << endl;
+        getline(cin, a);
+        // cin >> a;
+        iter(0);
+        cout << k << endl;
+        k.clear();
+    }
+    void approach1()
+    {
+        string a, k;
+        cout << "enter the string : " << endl;
+        getline(cin, a);
+        for (int i = 0; i < a.size(); i++)
+        {
+            if (int(a[i]) >= 65 && int(a[i]) <= 90 || int(a[i]) >= 97 && int(a[i]) <= 122)
+            {
+                k = k + a[i];
+            }
+        }
+        cout << k << endl;
+    }
+};
+
+class Sum_of_Digits_of_a_Number
+{
+public:
+    int n;
+    int b = 0;
+    int iter(int a)
+    {
+        if (a == 0)
+            return 0;
+        b = b + a % 10;
+        return iter(a / 10);
+    }
+    int output()
+    {
+        cout << "enter the number: " << endl;
+        cin >> n;
+        iter(n);
+        cout << b << endl;
+        return b = 0;
+    }
+};
+
+class armstrong
+{
+public:
+    int n, b = 0, c = 0;
+    int iter(int n)
+    {
+        if (n == 0)
+            return n;
+        b++;
+        return iter(n / 10);
+    }
+    int iter2(int n)
+    {
+        if (n == 0)
+            return n;
+        c = c + pow(n % 10, b);
+        return iter2(n / 10);
+    }
+    int output()
+    {
+        cout << "enter the number: " << endl;
+        cin >> n;
+        iter(n);
+        iter2(n);
+        if (c == n)
+        {
+            cout << c << endl;
+            cout << "its armstrong: " << endl;
+        }
+        else
+            cout << "its not an armstrong number: " << endl;
+        return b = 0, c = 0;
+    }
+
+    void approach()
+    {
+        int a = 0, b = 0, n, d, k;
+        cout << "enter the number: " << endl;
+        cin >> n;
+        d = n;
+        k = d;
+        while (n > 0)
+        {
+            a++;
+            n = n / 10;
+        }
+        while (d > 0)
+        {
+            b = b + pow(d % 10, a);
+            d = d / 10;
+        }
+        if (k == b)
+        {
+            cout << b << endl;
+            cout << "its armstrong" << endl;
+        }
+        else
+        {
+            cout << b << endl;
+            cout << "its not an armstrong" << endl;
+        }
+    }
+};
+
+class string_match_with_wildcard
+{
+public:
+    string a;
+    string b;
+    int c = 0, d = 0,l=0;
+    int iter(int c)
+    {
+        if (c >= a.length())
+            return c;
+        if (c == a.length() - 1)
+        {
+            if (a[a.length() - 1] == '*')
+            {
+                d = d + (b.length() - d);
+            }
+        }
+        else if (a[c] == '*')
+        {
+            d = d+2;
+            l++;
+        }
+        if (a[c] == b[l] || a[c] == '?')
+        {
+            d++;
+        }
+        c++;
+        l++;
+        return iter(c);
+    }
+    int output()
+    {
+        cout << "enter the string with wild character: " << endl;
+        cin >> a;
+        cout << "enter the string without wild charachter: " << endl;
+        cin >> b;
+        iter(0);
+        // cout << a.length() << endl;
+        // cout << b.length() << endl;
+        cout << d << endl;
+        if (d == b.length())
+        {
+            cout << "thsi string is match: " << endl;
+        }
+        else
+        {
+            cout << "this string is not match: " << endl;
+        }
+        return d = 0,l=0;
+    }
+};
+
 int main()
 {
     // driver code for multiple test cases
@@ -643,6 +878,11 @@ int main()
     remove_wide_space o14;
     power_of_a_number o15;
     Anagram o16;
+    palindome_string o17;
+    remove_special_char o18;
+    Sum_of_Digits_of_a_Number o19;
+    armstrong o20;
+    string_match_with_wildcard o21;
     int a = 1, n;
     cout << "enter the test cases: " << endl;
     cin >> a;
@@ -667,7 +907,14 @@ int main()
         // o13.output();
         // o14.output();
         // o15.output();
-        o16.output();
+        // o16.output();
+        // o17.output();
+        // o18.output();
+        // o18.approach1();
+        // o19.output();
+        // o20.output();
+        // o20.approach();
+        o21.output();
     }
     return 0;
 }
